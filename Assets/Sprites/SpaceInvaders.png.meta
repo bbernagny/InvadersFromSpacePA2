@@ -204,10 +204,10 @@ TextureImporter:
       name: PlayerShip
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 16
-        height: 16
+        x: 68
+        y: 66
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -716,10 +716,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       ShieldLeft_3: 1770579618
+      Alien_05_01: 594421765
       MotherShip: -1096513593
-      EnemyBullet_0: -1466579442
-      FriendlyBullet: -313590723
       PlayerShip: 907148002
+      FriendlyBullet: -313590723
       Alien_04_01: 1661105045
       Alien_01_01: -1276636312
       Alien_03_01: -1875141919
@@ -741,8 +741,8 @@ TextureImporter:
       EnemyBullet_1: -1326030814
       ShieldRight_3: -1447803275
       Alien_01_00: -993472500
-      Alien_05_01: 594421765
       ShieldLeft_4: -1632294030
+      EnemyBullet_0: -1466579442
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
