@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public GameObject bulletPrefab;
 
+    [SerializeField] private ObjectPool objectPool = null;
+
     Camera cam;
     public float width;
     private float speed= 3f;
@@ -52,7 +54,9 @@ public class Player : MonoBehaviour
     {
         isShooting = true;
 
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject obj = objectPool.GetPooledObject();
+        obj.transform.position = gameObject.transform.position;
         yield return new WaitForSeconds(coolDown);
 
         isShooting = false;

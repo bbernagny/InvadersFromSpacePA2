@@ -8,8 +8,14 @@ public class DestroyAfterSeconds : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, seconds);
+       // Destroy(gameObject, seconds);
     }
 
-    
+    private void Update()
+    {
+        if(transform.position.y > 7f)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
