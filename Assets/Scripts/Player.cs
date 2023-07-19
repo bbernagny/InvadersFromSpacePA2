@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,12 +54,25 @@ public class Player : MonoBehaviour
     private IEnumerator Shoot()
     {
         isShooting = true;
-
         //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         GameObject obj = objectPool.GetPooledObject();
         obj.transform.position = gameObject.transform.position;
         yield return new WaitForSeconds(coolDown);
-
         isShooting = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            Debug.Log("Player Hit..!");
+            collision.gameObject.SetActive(false);
+            TakeDamage();
+        }
+    }
+
+    public void TakeDamage()
+    {
+
     }
 }
