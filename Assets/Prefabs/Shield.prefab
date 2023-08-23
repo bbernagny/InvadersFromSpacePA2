@@ -43,6 +43,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5646551545337476327}
   - component: {fileID: 5646551545337476320}
+  - component: {fileID: 6293436848223930490}
+  - component: {fileID: 2392073154105610636}
   m_Layer: 0
   m_Name: ShieldRight_1
   m_TagString: Untagged
@@ -58,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646551545337476326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.551, y: -2.91, z: 0}
+  m_LocalPosition: {x: 0.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,6 +119,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6293436848223930490
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646551545337476326}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.094364345, y: -0.12508762}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8112713, y: 0.74982476}
+  m_EdgeRadius: 0
+--- !u!114 &2392073154105610636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646551545337476326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a3c00e0c45a430c9604b6bf3396320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states:
+  - {fileID: -1228870681, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
+  - {fileID: -1447803275, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
+  - {fileID: -1901804368, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
+  - {fileID: -1559327116, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
 --- !u!1 &5646551546288714674
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +172,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5646551546288714675}
   - component: {fileID: 5646551546288714668}
+  - component: {fileID: 7716636937180360550}
+  - component: {fileID: 598986276958890561}
   m_Layer: 0
   m_Name: ShieldLeft_1
   m_TagString: Untagged
@@ -142,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646551546288714674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.449, y: -2.91, z: 0}
+  m_LocalPosition: {x: -0.48000002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -201,3 +248,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7716636937180360550
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646551546288714674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.094364345, y: -0.12508762}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8112713, y: 0.74982476}
+  m_EdgeRadius: 0
+--- !u!114 &598986276958890561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646551546288714674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a3c00e0c45a430c9604b6bf3396320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states:
+  - {fileID: -1632294030, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
+  - {fileID: 1770579618, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
+  - {fileID: 1814559274, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}
+  - {fileID: 2107256116, guid: a53ffbb4be23a42fda951c60f521c4bb, type: 3}

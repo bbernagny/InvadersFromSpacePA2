@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DestroyAfterSeconds : MonoBehaviour
 {
-    public float bulletDeactivePos;
+    public float DeactivePos;
 
     private void Update()
     {
-        if(transform.position.y > bulletDeactivePos || transform.position.y < -bulletDeactivePos)
+        if(transform.position.y > DeactivePos || transform.position.y < -DeactivePos)
         {
             gameObject.SetActive(false);
         }

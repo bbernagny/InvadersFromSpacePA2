@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipStats : MonoBehaviour
+[System.Serializable]
+public class ShipStats
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Range(1, 5)]
+    public int maxHealth;
+    [HideInInspector]
+    public int currentHealth;
+    [HideInInspector]
+    public int maxLifes = 3;
+    [HideInInspector]
+    public int currentLifes = 3;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float shipSpeed;
+    public float fireRate;
 }

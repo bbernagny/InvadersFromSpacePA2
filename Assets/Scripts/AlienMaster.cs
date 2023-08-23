@@ -5,11 +5,11 @@ using UnityEngine;
 public class AlienMaster : MonoBehaviour
 {
     [SerializeField] private ObjectPool objectPool = null;
-    [SerializeField] Player playerScript; //Bunun yerine levelBoundery olusturmak daha iyi olur
+    Player _playerSC;//Bunun yerine levelBoundery olusturmak daha iyi olur
 
     public GameObject motherShipPrefab;
     public GameObject bulletPrefab;
-    private Vector3 motherShipSpawnPos = new Vector3(3.72f, 4.85f, 0);
+    private Vector3 motherShipSpawnPos = new Vector3(3.72f, 5.25f, 0);
     private Vector3 hMoveDistance = new Vector3(0.05f, 0, 0);
     private Vector3 vMoveDistance = new Vector3(0, 0.15f, 0);
     private float width;
@@ -25,10 +25,13 @@ public class AlienMaster : MonoBehaviour
     private float motherShipTimer = 1f;
     private const float MOTH_SHIP_MIN = 15f;
     private const float MOTH_SHIP_MAX = 60f;
+    private const float startY = 1.7f;
+    private bool entering = true;
 
     void Start()
     {
-        width  = playerScript.width - 0.15f;
+        _playerSC = GameObject.Find("PlayerShip").GetComponent<Player>();
+        width  = _playerSC.width - 0.15f;
         foreach(GameObject go in GameObject.FindGameObjectsWithTag("Alien"))
         {
             allAliens.Add(go);
@@ -37,21 +40,33 @@ public class AlienMaster : MonoBehaviour
 
     void Update()
     {
-        if(moveTimer <= 0)
+        if (entering)
         {
-            MoveEnemies();
+            transform.Translate(Vector2.down * Time.deltaTime * 10f);
+            if(transform.position.y < startY)
+            {
+                entering = false;
+            }
         }
-        if (shootTimer <= 0)
+        else
         {
-            Shoot();
+            if (moveTimer <= 0)
+            {
+                MoveEnemies();
+            }
+            if (shootTimer <= 0)
+            {
+                Shoot();
+            }
+            if (motherShipTimer <= 0)
+            {
+                MotherShipSpawn();
+            }
+            moveTimer -= Time.deltaTime;
+            shootTimer -= Time.deltaTime;
+            motherShipTimer -= Time.deltaTime;
         }
-        if(motherShipTimer <= 0)
-        {
-            MotherShipSpawn();
-        }
-        moveTimer -= Time.deltaTime;
-        shootTimer -= Time.deltaTime;
-        motherShipTimer -= Time.deltaTime;
+        
     }
 
     private void MoveEnemies()

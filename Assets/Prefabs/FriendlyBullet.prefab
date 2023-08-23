@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4799417035105224926}
   m_Layer: 0
   m_Name: FriendlyBullet
-  m_TagString: Untagged
+  m_TagString: FriendlyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f19d85270aca4b2bbb44b3531c25eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDeactivePos: 10
+  DeactivePos: 10
 --- !u!50 &4799417035105224926
 Rigidbody2D:
   serializedVersion: 4
